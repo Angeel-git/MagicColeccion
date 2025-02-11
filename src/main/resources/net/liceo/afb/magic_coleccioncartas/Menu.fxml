@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="net.liceo.afb.magic_coleccioncartas.ControllerMenu">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<VBox spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      style="-fx-background-color: #BEBEBE"
+      fx:controller="net.liceo.afb.magic_coleccioncartas.ControllerMenu"
+      stylesheets="@estilos.css">
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <HBox fx:id="HBoxMenu" alignment="TOP_CENTER" styleClass="hbox-background" style="-fx-padding: 20;">
+        <Label fx:id="MenuTxt" alignment="CENTER" text="MENÚ" textAlignment="CENTER" styleClass="labelMenu-styles"/>
+    </HBox>
+
 </VBox>

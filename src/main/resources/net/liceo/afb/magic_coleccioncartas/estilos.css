@@ -1,0 +1,21 @@
+/*HBox con imagen de fondo */
+.hbox-background {
+    -fx-background-image: url("imgs/imgMg0.jpg");
+    -fx-background-size: cover;  /* Hace que la imagen cubra el 100% de la img*/
+    -fx-background-repeat: no-repeat;  /* Evita que la imagen se repita */
+}
+
+/*Label Menu*/
+.labelMenu-styles{
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+    -fx-text-fill: purple;
+    -fx-padding: 10px;
+    -fx-border-radius: 50%;
+    -fx-border-color: purple;
+    -fx-border-width: 2px;
+    -fx-background-color: black;
+}
+
+
+
