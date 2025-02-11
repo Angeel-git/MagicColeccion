@@ -17,5 +17,17 @@
     -fx-background-color: black;
 }
 
+/*Label Nombre de la carta*/
+.NombreCarta-styles{
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+/*StackPaneStyles*/
+.VBoxCarta-styles{
+      -fx-background-color: #BEBEBE;
+      -fx-padding: 50px;
+      -fx-border-color: black;
+      -fx-border-width: 2px;
+}
 
 
