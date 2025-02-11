@@ -13,11 +13,12 @@
         <Button layoutX="50.0" layoutY="170.0" text="Listar Cartas" />
         <Button layoutX="50.0" layoutY="270.0" text="Analíticas" />
         <TextField layoutX="650.0" layoutY="105.0" promptText="NombreCarta" />
-        <Button layoutX="630.0" layoutY="135.0" onAction="#PedirDatosCarta" text="Agregar carta a la base de datos" />
+        <Button fx:id="AgregarCarta" layoutX="630.0" layoutY="135.0" onAction="#PedirDatosCarta" text="Agregar carta a la base de datos"/>
 
-        <VBox fx:id="VBoxCarta" alignment="TOP_CENTER" layoutX="200.0" layoutY="25.0" managed="true" prefHeight="305.0" prefWidth="396.0" spacing="20" styleClass="VBoxCarta-styles">
-            <Label fx:id="NombreCarta" managed="true" styleClass="NombreCarta-styles" text="NOMBRECARTA(ELIMINAR)" />
-                <MenuButton fx:id="ColoresMenu" managed="true" text="Color de la carta">
+        <VBox fx:id="VBoxCarta" alignment="TOP_CENTER" layoutX="200.0" layoutY="25.0"
+              managed="fasle" prefHeight="305.0" prefWidth="396.0" spacing="20" styleClass="VBoxCarta-styles">
+            <Label fx:id="NombreCarta" managed="false" styleClass="NombreCarta-styles" text="NOMBRECARTA(ELIMINAR)" />
+            <MenuButton fx:id="ColoresMenu" managed="fasle" visible="false" text="Color de la carta">
                     <items>
                         <MenuItem text="Blanco" />
                         <MenuItem text="Azul" />
@@ -28,10 +29,10 @@
                     </items>
                 </MenuButton>
             <HBox alignment="CENTER">
-                <Label managed="true" text="Maná --> " />
-                <TextField fx:id="TextFieldMana" managed="true" promptText="Introduce el mana de la carta" />
+                <Label fx:id="LabelMana" managed="fasle" text="Maná --> " />
+                <TextField fx:id="TextFieldMana" managed="fasle" promptText="Introduce el mana de la carta" />
             </HBox>
-            <MenuButton fx:id="TipoMenu" managed="true" text="Tipo de carta">
+            <MenuButton fx:id="TipoMenu" managed="fasle" visible="false" text="Tipo de carta">
                 <items>
                     <MenuItem text="Tierra"/>
                     <MenuItem text="Criaturas"/>
@@ -41,7 +42,7 @@
                     <MenuItem text="Artefactos"/>
                 </items>
             </MenuButton>
-            <Button managed="true" text="Guardar Carta"/>
+            <Button fx:id="InsertCarta" managed="fasle" text="Guardar Carta"/>
         </VBox>
     </AnchorPane>
 </VBox>
