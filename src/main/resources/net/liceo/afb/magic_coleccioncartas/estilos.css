@@ -22,6 +22,11 @@
     -fx-font-weight: bold;
     -fx-font-size: 15px;
 }
+/*Label mensaje Error*/
+.Error-styles{
+        -fx-text-fill: red;
+}
+
 /*StackPaneStyles*/
 .VBoxCarta-styles{
       -fx-background-color: #BEBEBE;
