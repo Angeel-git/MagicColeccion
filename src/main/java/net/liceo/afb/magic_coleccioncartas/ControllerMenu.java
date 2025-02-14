@@ -12,16 +12,20 @@ public class ControllerMenu {
     @FXML
     public HBox HBoxMenu;
     @FXML
-    public Label NombreCarta, LabelMana, Error;
+    public Label NombreCarta, LabelMana;
     public TextField TextFieldMana, TextFieldNombre;
     public VBox VBoxCarta;
     public MenuButton ColoresMenu, TipoMenu;
     public Button InsertCarta, AgregarCarta;
 
     Log log = new Log();
+    Alertas alerta = new Alertas();
 
 
     public void initialize() {
+
+        System.out.println("Escena -> Menú");
+
         // Agregar evento a cada item del MenuButton
         for (MenuItem item : ColoresMenu.getItems()) {
             item.setOnAction(event -> {
@@ -39,13 +43,9 @@ public class ControllerMenu {
 
 
     public void PedirDatosCarta(ActionEvent event) {
-
         if(AgregarCarta.isArmed() && !(TextFieldNombre.getText().isEmpty())){   //Si pulsa el boton y el nombre no esta en blanco
 
             System.out.println("Pedir datos para añadir la carta \"" + TextFieldNombre.getText() + "\"");
-
-            //Oculto el error
-            Error.setManaged(false); Error.setVisible(false);
 
             //Muestro los datos que tiene que rellenar el usuario para añadir la carta a la basae de datos
             AgregarCarta.setDisable(true);
@@ -59,22 +59,30 @@ public class ControllerMenu {
             InsertCarta.setManaged(true);
 
         }else{
-            Error.setManaged(true);
-            Error.setText("Tienes que introducir un nombre\npara la carta que quieres guardar");
+            System.err.println("El usuario tiene que introducir el nombre de la carta antes de continuar");
+
+            alerta.informa("NombreCarta", "",
+                        "Tienes que introducir primero el nombre de la carta.");
+
         }
     }
 
     public void InsertCarta(ActionEvent event) {
         try{
             int mana = Integer.parseInt(TextFieldMana.getText().trim());
-        System.out.println("Nombre-> " + NombreCarta.getText() + "\nColor -> " + ColoresMenu.getText() +
-                "\nMana-> " + mana +
-                "\nTipo de carta -> " + TipoMenu.getText());
+            String nombre = NombreCarta.getText().trim();
+            String color = ColoresMenu.getText().trim();
+            String tipo = TipoMenu.getText().trim();
+
+            System.out.println("Nombre -> " + nombre + "\nColor -> " + color + "\nMana -> " + mana + "Tipo Carta -> " + tipo);
 
             log.insertarCarta(NombreCarta.getText(), ColoresMenu.getText(), mana,TipoMenu.getText());
 
         }catch (NumberFormatException nfe){
             System.err.println("El mana tiene que ser un numero entero");
+
+            alerta.error("Alerta_Mana", "Valor del mana incorrecto",
+                                "El valor del mana debe ser un numero entero");
         }
     }
 }

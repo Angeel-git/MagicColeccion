@@ -18,4 +18,10 @@
         <Mana>20</Mana>
         <Tipo>Conjuros</Tipo>
     </Carta>
+    <Carta>
+        <Nombre>Lanzamiento piedra</Nombre>
+        <Color>Verde</Color>
+        <Mana>15</Mana>
+        <Tipo>Tierra</Tipo>
+    </Carta>
 </Cartas>

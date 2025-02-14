@@ -14,11 +14,11 @@
         <Button layoutX="50.0" layoutY="270.0" text="Analíticas" />
         <TextField fx:id="TextFieldNombre" layoutX="650.0" layoutY="105.0" promptText="NombreCarta" />
         <Button fx:id="AgregarCarta" layoutX="630.0" layoutY="135.0" onAction="#PedirDatosCarta" text="Agregar carta a la base de datos" />
-        <Label fx:id="Error" layoutX="630.0" layoutY="196.0" managed="false" prefWidth="352.0" styleClass="Error-styles"/>
 
         <VBox fx:id="VBoxCarta" alignment="TOP_CENTER" layoutX="200.0" layoutY="25.0" managed="fasle" prefHeight="305.0" prefWidth="396.0" spacing="20" styleClass="VBoxCarta-styles">
             <Label fx:id="NombreCarta" managed="false" styleClass="NombreCarta-styles" />
-            <MenuButton fx:id="ColoresMenu" managed="fasle" text="Color de la carta" visible="false">
+            <HBox spacing="30" alignment="CENTER">
+                <MenuButton fx:id="ColoresMenu" managed="fasle" text="Color de carta" visible="false">
                     <items>
                         <MenuItem text="Blanco" />
                         <MenuItem text="Azul" />
@@ -28,20 +28,21 @@
                         <MenuItem text="Sin color" />
                     </items>
                 </MenuButton>
+                <MenuButton fx:id="TipoMenu" managed="fasle" text="Tipo de carta" visible="false">
+                    <items>
+                        <MenuItem text="Tierra" />
+                        <MenuItem text="Criaturas" />
+                        <MenuItem text="Encantamientos" />
+                        <MenuItem text="Conjuros" />
+                        <MenuItem text="Instantáneos" />
+                        <MenuItem text="Artefactos" />
+                    </items>
+                </MenuButton>
+            </HBox>
             <HBox alignment="CENTER">
                 <Label fx:id="LabelMana" managed="fasle" text="Maná --&gt; " />
                 <TextField fx:id="TextFieldMana" managed="fasle" promptText="Introduce el mana de la carta" />
             </HBox>
-            <MenuButton fx:id="TipoMenu" managed="fasle" text="Tipo de carta" visible="false">
-                <items>
-                    <MenuItem text="Tierra" />
-                    <MenuItem text="Criaturas" />
-                    <MenuItem text="Encantamientos" />
-                    <MenuItem text="Conjuros" />
-                    <MenuItem text="Instantáneos" />
-                    <MenuItem text="Artefactos" />
-                </items>
-            </MenuButton>
             <Button fx:id="InsertCarta" managed="fasle" text="Guardar Carta" onAction="#InsertCarta" />
         </VBox>
     </AnchorPane>
