@@ -63,7 +63,6 @@ public class ControllerMenu {
 
             alerta.informa("NombreCarta", "",
                         "Tienes que introducir primero el nombre de la carta.");
-
         }
     }
 
@@ -74,10 +73,15 @@ public class ControllerMenu {
             String color = ColoresMenu.getText().trim();
             String tipo = TipoMenu.getText().trim();
 
-            System.out.println("Nombre -> " + nombre + "\nColor -> " + color + "\nMana -> " + mana + "Tipo Carta -> " + tipo);
+            if(color.equals("Color de carta")||tipo.equals("Tipo de carta")){
+                alerta.informa("Campos Color/Tipo", "Campos \"color\" y \"tipo\"",
+                        "Los campos \"color\" y/o \"tipo\" no son validos, tienes que cambiar los valores establecidos");
+            }else{
+                log.insertarCarta(nombre, color, mana,tipo);
 
-            log.insertarCarta(NombreCarta.getText(), ColoresMenu.getText(), mana,TipoMenu.getText());
-
+                System.out.println("Nombre -> " + nombre + "\nColor -> " + color +
+                        "\nMana -> " + mana + "Tipo Carta -> " + tipo);
+            }
         }catch (NumberFormatException nfe){
             System.err.println("El mana tiene que ser un numero entero");
 

@@ -18,5 +18,4 @@ public class Alertas {
         a.setContentText(contenido);
         a.showAndWait();
     }
-
 }
