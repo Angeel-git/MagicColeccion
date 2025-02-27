@@ -77,10 +77,9 @@ public class ControllerMenu {
                 alerta.informa("Campos Color/Tipo", "Campos \"color\" y \"tipo\"",
                         "Los campos \"color\" y/o \"tipo\" no son validos, tienes que cambiar los valores establecidos");
             }else{
-                log.insertarCarta(nombre, color, mana,tipo);
-
-                System.out.println("Nombre -> " + nombre + "\nColor -> " + color +
-                        "\nMana -> " + mana + "Tipo Carta -> " + tipo);
+                Carta carta = new Carta(nombre, color, mana, tipo);
+                log.insertarCarta(carta);
+                System.out.println(carta);
             }
         }catch (NumberFormatException nfe){
             System.err.println("El mana tiene que ser un numero entero");

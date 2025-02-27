@@ -16,7 +16,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class Ficheros {
-    public void RegistoNuevaCarta(String nombre, String color, int mana, String tipo){
+    public void RegistoNuevaCarta(Carta carta){
         String ruta = "Cartas.xml";
 
         try{
@@ -41,20 +41,21 @@ public class Ficheros {
             Element Carta = doc.createElement("Carta");
             raiz.appendChild(Carta);
 
+
             Element nombreCarta = doc.createElement("Nombre");
-            nombreCarta.setTextContent(nombre);
+            nombreCarta.setTextContent(carta.getNombre());
             Carta.appendChild(nombreCarta);
 
             Element colorCarta = doc.createElement("Color");
-            colorCarta.setTextContent(color);
+            colorCarta.setTextContent(carta.getColor());
             Carta.appendChild(colorCarta);
 
             Element manaCarta = doc.createElement("Mana");
-            manaCarta.setTextContent(String.valueOf(mana));
+            manaCarta.setTextContent(String.valueOf(carta.getMana()));
             Carta.appendChild(manaCarta);
 
             Element tipoCarta = doc.createElement("Tipo");
-            tipoCarta.setTextContent(tipo);
+            tipoCarta.setTextContent(carta.getTipo());
             Carta.appendChild(tipoCarta);
 
 
