@@ -3,13 +3,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox styleClass="VBox-styles" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.liceo.afb.magic_coleccioncartas.ControllerMenu">
-    <HBox fx:id="HBoxMenu" alignment="TOP_CENTER" style="-fx-padding: 20;" styleClass="hbox-background">
+<VBox styleClass="VBox-styles" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.liceo.afb.magic_coleccioncartas.ControllerMenu">
+    <HBox alignment="TOP_CENTER" style="-fx-padding: 20;" styleClass="hbox-background">
         <Label alignment="CENTER" styleClass="labelMenu-styles" text="MENÚ" textAlignment="CENTER" />
     </HBox>
 
     <AnchorPane prefHeight="117.0" prefWidth="138.0">
-        <Button layoutX="50.0" layoutY="70.0" text="Buscar Carta" />
+        <Button layoutX="50.0" layoutY="70.0" text="Buscar Carta" onAction="#EscenaBuscador"/>
         <Button layoutX="50.0" layoutY="170.0" text="Listar Cartas" />
         <Button layoutX="50.0" layoutY="270.0" text="Analíticas" />
         <TextField fx:id="TextFieldNombre" layoutX="650.0" layoutY="105.0" promptText="NombreCarta" />

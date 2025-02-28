@@ -9,8 +9,7 @@ import javafx.scene.layout.VBox;
 import java.io.IOException;
 
 public class ControllerMenu {
-    @FXML
-    public HBox HBoxMenu;
+
     @FXML
     public Label NombreCarta, LabelMana;
     public TextField TextFieldMana, TextFieldNombre;
@@ -18,6 +17,7 @@ public class ControllerMenu {
     public MenuButton ColoresMenu, TipoMenu;
     public Button InsertCarta, AgregarCarta;
 
+    Escenas escenas = new Escenas();
     Log log = new Log();
     Alertas alerta = new Alertas();
 
@@ -87,5 +87,9 @@ public class ControllerMenu {
             alerta.error("Alerta_Mana", "Valor del mana incorrecto",
                                 "El valor del mana debe ser un numero entero");
         }
+    }
+
+    public void EscenaBuscador(ActionEvent event) {
+        escenas.cambiarEscenaBuscador(event);
     }
 }
