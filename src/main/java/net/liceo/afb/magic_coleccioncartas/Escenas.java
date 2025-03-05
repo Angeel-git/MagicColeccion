@@ -16,22 +16,13 @@ public class Escenas {
     private Scene scene;
     private Parent root;
 
-    public void cambiarEscenaBuscador(ActionEvent event) {
+    public void Buscador(ActionEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(MagicColeccion.class.getResource("BuscarCarta.fxml"));
             root = fxmlLoader.load(); // Cargar solo UNA vez
 
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root, 850, 500); // Usar root en lugar de cargar dos veces
-
-            stage.setTitle("Coleccion Cartas Magic");
-
-            try {
-                Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("imgs/Logo.jpg")));
-                stage.getIcons().add(icon);
-            } catch (NullPointerException e) {
-                System.err.println("Error al cargar el icono.");
-            }
 
             stage.setScene(scene);
             stage.show();
@@ -41,4 +32,22 @@ public class Escenas {
             e.printStackTrace();
         }
     }
+
+    public void Menu(ActionEvent event){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(MagicColeccion.class.getResource("Menu.fxml"));
+            root = fxmlLoader.load(); // Cargar solo UNA vez
+
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root, 850, 500); // Usar root en lugar de cargar dos veces
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            System.err.println("Error al cambiar de escena: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
 }

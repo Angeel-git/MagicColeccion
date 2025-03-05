@@ -90,6 +90,6 @@ public class ControllerMenu {
     }
 
     public void EscenaBuscador(ActionEvent event) {
-        escenas.cambiarEscenaBuscador(event);
+        escenas.Buscador(event);
     }
 }

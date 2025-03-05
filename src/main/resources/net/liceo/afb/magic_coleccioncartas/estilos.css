@@ -36,3 +36,7 @@
 }
 
 
+.TextFieldBuscador-styles{
+    -fx-pref-width: 300px;
+    -fx-pref-height: 25px;
+}
