@@ -50,4 +50,20 @@ public class Escenas {
         }
     }
 
+    public void Listado(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(MagicColeccion.class.getResource("Listado.fxml"));
+            root = fxmlLoader.load(); // Cargar solo UNA vez
+
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root, 500, 650);
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            System.err.println("Error al cambiar de escena: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
 }

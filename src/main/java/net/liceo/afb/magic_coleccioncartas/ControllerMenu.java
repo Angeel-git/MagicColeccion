@@ -92,4 +92,8 @@ public class ControllerMenu {
     public void EscenaBuscador(ActionEvent event) {
         escenas.Buscador(event);
     }
+
+    public void EscenaListado(ActionEvent event) {
+        escenas.Listado(event);
+    }
 }

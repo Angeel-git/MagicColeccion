@@ -35,6 +35,14 @@
       -fx-border-width: 2px;
 }
 
+.VBoxListado-styles{
+      -fx-background-color: #BEBEBE;
+      -fx-padding: 50px;
+      -fx-border-color: black;
+      -fx-border-width: 2px;
+      -fx-pref-width: 300px;
+}
+
 
 .TextFieldBuscador-styles{
     -fx-pref-width: 300px;

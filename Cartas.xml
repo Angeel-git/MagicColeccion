@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Cartas>
+    <Carta>
+        <Nombre>j</Nombre>
+        <Color>Negro</Color>
+        <Mana>25</Mana>
+        <Tipo>Tierra</Tipo>
+    </Carta>
+<Carta><Nombre>f</Nombre><Color>Azul</Color><Mana>5</Mana><Tipo>Tierra</Tipo></Carta></Cartas>
