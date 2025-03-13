@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox styleClass="VBox-styles" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/17.0.12"
+<VBox styleClass="VBox-styles" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/17.0.12"
       xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.liceo.afb.magic_coleccioncartas.ControllerListado">
     <HBox alignment="TOP_CENTER" style="-fx-padding: 20;" styleClass="hbox-background">
         <Label alignment="CENTER" styleClass="labelMenu-styles" text="LISTADO" textAlignment="CENTER"/>

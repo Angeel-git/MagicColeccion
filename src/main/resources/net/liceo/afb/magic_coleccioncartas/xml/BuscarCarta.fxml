@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox styleClass="VBox-styles" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.liceo.afb.magic_coleccioncartas.ControllerBuscador">
+    <HBox alignment="TOP_CENTER" style="-fx-padding: 20;" styleClass="hbox-background">
+        <Label alignment="CENTER" styleClass="labelMenu-styles" text="CARTAS" textAlignment="CENTER" />
+    </HBox>
+    <AnchorPane>
+        <TextField fx:id="NombreCarta" layoutX="280.0" layoutY="20.0" promptText="Introduzca el nombre de la carta que desea buscar" styleClass="TextFieldBuscador-styles" />
+        <VBox alignment="CENTER" layoutX="335.0" layoutY="77.0" spacing="25" styleClass="VBoxCarta-styles">
+            <Label styleClass="NombreCarta-styles" text="Nombre Carta"/>
+            <Label text="Color"/>
+            <Label text="Tipo"/>
+            <Label text="Mana"/>
+        </VBox>
+        <Button layoutX="390.0" layoutY="350.0" onAction="#EscenaMenu" text="Volver al Menú" />
+    </AnchorPane>
+</VBox>

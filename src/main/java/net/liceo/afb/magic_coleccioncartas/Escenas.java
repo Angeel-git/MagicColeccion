@@ -18,7 +18,7 @@ public class Escenas {
 
     public void Buscador(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(MagicColeccion.class.getResource("BuscarCarta.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(MagicColeccion.class.getResource("xml/BuscarCarta.fxml"));
             root = fxmlLoader.load(); // Cargar solo UNA vez
 
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -35,7 +35,7 @@ public class Escenas {
 
     public void Menu(ActionEvent event){
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(MagicColeccion.class.getResource("Menu.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(MagicColeccion.class.getResource("xml/Menu.fxml"));
             root = fxmlLoader.load(); // Cargar solo UNA vez
 
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -52,11 +52,28 @@ public class Escenas {
 
     public void Listado(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(MagicColeccion.class.getResource("Listado.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(MagicColeccion.class.getResource("xml/Listado.fxml"));
             root = fxmlLoader.load(); // Cargar solo UNA vez
 
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root, 500, 650);
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            System.err.println("Error al cambiar de escena: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+        public void Analiticas(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(MagicColeccion.class.getResource("xml/Analiticas.fxml"));
+            root = fxmlLoader.load(); // Cargar solo UNA vez
+
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root, 850, 500); // Usar root en lugar de cargar dos veces
 
             stage.setScene(scene);
             stage.show();

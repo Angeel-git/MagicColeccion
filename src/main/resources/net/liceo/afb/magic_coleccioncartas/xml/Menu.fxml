@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox styleClass="VBox-styles" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/17.0.12"
+<VBox styleClass="VBox-styles" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/17.0.12"
       xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.liceo.afb.magic_coleccioncartas.ControllerMenu">
     <HBox alignment="TOP_CENTER" style="-fx-padding: 20;" styleClass="hbox-background">
         <Label alignment="CENTER" styleClass="labelMenu-styles" text="MENÚ" textAlignment="CENTER" />
@@ -12,7 +12,7 @@
     <AnchorPane prefHeight="117.0" prefWidth="138.0">
         <Button layoutX="50.0" layoutY="70.0" text="Buscar Carta" onAction="#EscenaBuscador"/>
         <Button layoutX="50.0" layoutY="170.0" text="Listar Cartas" onAction="#EscenaListado"/>
-        <Button layoutX="50.0" layoutY="270.0" text="Analíticas" />
+        <Button layoutX="50.0" layoutY="270.0" text="Analíticas" onAction="#EscenaAnaliticas"/>
         <TextField fx:id="TextFieldNombre" layoutX="650.0" layoutY="105.0" promptText="NombreCarta"/>
         <Button fx:id="AgregarCarta" layoutX="630.0" layoutY="135.0" onAction="#PedirDatosCarta" text="Agregar carta a la base de datos" />
 

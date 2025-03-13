@@ -96,4 +96,9 @@ public class ControllerMenu {
     public void EscenaListado(ActionEvent event) {
         escenas.Listado(event);
     }
+
+    public void EscenaAnaliticas(ActionEvent event) {
+        escenas.Analiticas(event);
+    }
+
 }
