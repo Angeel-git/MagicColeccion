@@ -73,7 +73,7 @@ public class Escenas {
             root = fxmlLoader.load(); // Cargar solo UNA vez
 
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root, 850, 500); // Usar root en lugar de cargar dos veces
+            scene = new Scene(root, 850, 650); // Usar root en lugar de cargar dos veces
 
             stage.setScene(scene);
             stage.show();
